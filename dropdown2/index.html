@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Dropdown menu2</title>
+	</head>
+	<body>
+		<div class="menu">
+			<ul class="list">
+				<li>Save</li>
+				<li>Export to GitHub</li>
+				<li>Delete</li>
+				<li>Share</li>
+			</ul>
+		</div>
+
+		<script>
+			$(".menu").on("click", function () {
+				$(".list").toggleClass("hidden");
+			});
+		</script>
+	</body>
+</html>

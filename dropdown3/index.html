@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/18a281af1f.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Dropdown menu</title>
+	</head>
+	<body>
+		<div class="menu">
+			<div class="title" onclick="f()">
+				John Doe <span class="fa fa-bars"></span>
+				<div class="arrow"></div>
+			</div>
+			<div class="dropdown">
+				<p>Inbox <span class="fa fa-inbox"></span></p>
+				<p>Settings <span class="fa fa-gear"></span></p>
+				<p>Sign Out <span class="fa fa-sign-out"></span></p>
+			</div>
+		</div>
+
+		<script>
+			function f() {
+				document.getElementsByClassName("dropdown")[0].classList.toggle("down");
+				document.getElementsByClassName("arrow")[0].classList.toggle("gone");
+				if (
+					document
+						.getElementsByClassName("dropdown")[0]
+						.classList.contains("down")
+				) {
+					setTimeout(function () {
+						document.getElementsByClassName("dropdown")[0].style.overflow =
+							"visible";
+					}, 500);
+				} else {
+					document.getElementsByClassName("dropdown")[0].style.overflow =
+						"hidden";
+				}
+			}
+		</script>
+	</body>
+</html>
