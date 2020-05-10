@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>dropdown 4</title>
+	</head>
+	<body>
+		<main>
+			<h2>CSS Dropdown Menu</h2>
+			<nav>
+				<div class="dropdown hover">
+					<a href="#">Hover Menu</a>
+					<ul>
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">Text</a></li>
+						<li><a href="#">Page</a></li>
+						<li><a href="#">Thing</a></li>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">Text</a></li>
+					</ul>
+				</div>
+				<div class="dropdown toggle">
+					<input id="t1" type="checkbox" checked />
+					<label for="t1">Toggle Menu</label>
+					<ul>
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">Text</a></li>
+						<li><a href="#">Page</a></li>
+						<li><a href="#">Thing</a></li>
+					</ul>
+				</div>
+			</nav>
+		</main>
+		<script src="">
+			// close the toggle menu if user clicks outside of the menu
+
+			$(document).click(function (event) {
+				if (
+					$(".toggle > input").is(":checked") &&
+					!$(event.target).parents(".toggle").is(".toggle")
+				) {
+					$(".toggle > input").prop("checked", false);
+				}
+			});
+		</script>
+	</body>
+</html>
